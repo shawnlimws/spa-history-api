@@ -3,9 +3,9 @@ var express = require('express')
 var app = express()
 var root = __dirname + '/'
 app.use(express.static(root))
-app.use(fallback('index.html', { root: root }))
-// app.get('*', function (req, res) {
-//   res.sendFile(__dirname + '/index.html')
-// })
+// app.use(fallback('index.html', { root: root }))
+app.get('*', function (req, res) {
+  res.sendFile(__dirname + '/index.html')
+})
 
 app.listen(8080)

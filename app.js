@@ -14,7 +14,6 @@ document.addEventListener('click', event => {
 })
 
 document.addEventListener('change', event => {
-  console.log(window.location.pathname)
   window.history.replaceState(null, '', '/shop#' + document.querySelector('#option').value)
 })
 
